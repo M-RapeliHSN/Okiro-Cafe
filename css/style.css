@@ -1,0 +1,279 @@
+/* ==========================================================================
+   ÖKIRO CAFÉ - Custom Animation & Design System Stylesheet
+   Theme: Japanese-Minimalist, Clean, Warm
+   Colors: #F6F4EB (Off-White), #829C71 (Sage), #2C4027 (Forest), #1A1A1A (Charcoal)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #F6F4EB;
+  --color-sage: #829C71;
+  --color-forest: #2C4027;
+  --color-charcoal: #1A1A1A;
+  --color-cream: #EFECE0;
+  --color-sand: #E3DEC3;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-charcoal);
+}
+
+.font-jp {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F4EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #829C71;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2C4027;
+}
+
+/* --------------------------------------------------------------------------
+   KEYFRAME ANIMATIONS
+   -------------------------------------------------------------------------- */
+
+/* Steam Wafting Animation for Coffee Cup Icon */
+@keyframes steam-left {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-8px) scaleX(1.2) translateX(-3px);
+  }
+  100% {
+    transform: translateY(-16px) scaleX(1.5) translateX(-5px);
+    opacity: 0;
+  }
+}
+
+@keyframes steam-right {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-9px) scaleX(1.1) translateX(3px);
+  }
+  100% {
+    transform: translateY(-18px) scaleX(1.4) translateX(6px);
+    opacity: 0;
+  }
+}
+
+.steam-particle-1 {
+  animation: steam-left 2.6s infinite ease-out;
+}
+.steam-particle-2 {
+  animation: steam-right 2.9s infinite ease-out 0.8s;
+}
+
+/* Radar Pulse Ring for Live Status & Floating WA */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(130, 156, 113, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(130, 156, 113, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(130, 156, 113, 0);
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Floating Ambient Motion */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(-3deg);
+  }
+}
+
+.animate-float {
+  animation: float-slow 4.5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5.5s ease-in-out infinite;
+}
+
+/* Badge Bounce / Pop */
+@keyframes badge-pop {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.badge-bounce {
+  animation: badge-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Shimmer Highlight Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, #829C71 0%, #A5BF93 50%, #829C71 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* Flying Ball to Cart Animation Container */
+.flying-particle {
+  position: fixed;
+  z-index: 9999;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #829C71;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 6px 18px rgba(130, 156, 113, 0.6);
+  transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Scroll Reveal States */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Product Card 3D Subtle Hover */
+.product-card {
+  transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px -10px rgba(44, 64, 39, 0.12);
+}
+
+.product-image {
+  transition: transform 0.5s ease-out;
+}
+.product-card:hover .product-image {
+  transform: scale(1.06);
+}
+
+/* Subtle Japanese Texture Background Overlay */
+.bg-japanese-dots {
+  background-image: radial-gradient(#829C71 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Soft Glassmorphism */
+.glass-panel {
+  background: rgba(246, 244, 235, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Toast Notification Animation */
+@keyframes toast-in {
+  from {
+    transform: translateY(100%) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.toast-enter {
+  animation: toast-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
