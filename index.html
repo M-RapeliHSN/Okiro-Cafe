@@ -53,7 +53,10 @@
        ===================================================================== -->
   <div class="bg-[#2C4027] text-[#F6F4EB] text-xs py-2 px-4 text-center font-medium relative z-50 flex items-center justify-center gap-2">
     <span class="inline-block w-2 h-2 rounded-full bg-[#829C71] animate-pulse"></span>
-    <span>🌿 Promo Spesial UMKM: Dapatkan diskon 15% untuk pemesanan dine-in sebelum jam 11:00 WIB!</span>
+    <span class="flex items-center gap-1.5">
+      <svg class="w-3.5 h-3.5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+      Promo Spesial UMKM: Dapatkan diskon 15% untuk pemesanan dine-in sebelum jam 11:00 WIB!
+    </span>
   </div>
 
   <!-- =====================================================================
@@ -213,14 +216,17 @@
 
           <!-- Quick Features Bullet -->
           <div class="pt-6 border-t border-stone-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-stone-600 font-semibold reveal-left delay-400">
-            <div class="flex items-center gap-2">
-              <span class="text-[#829C71]">✓</span> 100% Single Origin Lokal
+            <div class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              <span>100% Single Origin Lokal</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[#829C71]">✓</span> Free Wi-Fi 100 Mbps
+            <div class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              <span>Free Wi-Fi 100 Mbps</span>
             </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[#829C71]">✓</span> Pesan Mudah via WhatsApp
+            <div class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              <span>Pesan Mudah via WhatsApp</span>
             </div>
           </div>
         </div>
@@ -250,8 +256,14 @@
 
           <!-- Floating Badge 1: Artisan Roast -->
           <div class="absolute -top-4 -left-4 sm:-left-8 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-stone-200/80 flex items-center gap-3 animate-float pointer-events-none">
-            <div class="w-10 h-10 rounded-xl bg-[#829C71]/15 text-[#829C71] flex items-center justify-center font-bold text-lg">
-              ☕
+            <div class="w-10 h-10 rounded-xl bg-[#829C71]/15 text-[#829C71] flex items-center justify-center">
+              <svg class="w-5 h-5 text-[#829C71]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                <line x1="6" y1="2" x2="6" y2="4"></line>
+                <line x1="10" y1="2" x2="10" y2="4"></line>
+                <line x1="14" y1="2" x2="14" y2="4"></line>
+              </svg>
             </div>
             <div>
               <p class="text-[11px] text-stone-400 font-bold uppercase tracking-wider">Fresh Roasting</p>
@@ -261,8 +273,10 @@
 
           <!-- Floating Badge 2: Customer Rating -->
           <div class="absolute -bottom-6 -right-2 sm:-right-6 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-stone-200/80 flex items-center gap-3 animate-float-reverse pointer-events-none">
-            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
-              ★
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-amber-500 fill-amber-500" viewBox="0 0 24 24">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
             </div>
             <div>
               <p class="text-xs font-bold text-[#1A1A1A]">4.9 / 5.0 Rating</p>
@@ -395,33 +409,38 @@
       <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 reveal-item">
         <button 
           data-category="all" 
-          class="category-btn whitespace-nowrap bg-[#829C71] text-white px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 shadow-md hover:opacity-90"
+          class="category-btn whitespace-nowrap bg-[#829C71] text-white px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 shadow-md hover:opacity-90 flex items-center gap-1.5"
         >
-          Semua Menu
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+          <span>Semua Menu</span>
         </button>
         <button 
           data-category="signature" 
-          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71]"
+          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71] flex items-center gap-1.5"
         >
-          🌟 Signature Craft
+          <svg class="w-3.5 h-3.5 text-amber-500 fill-amber-500" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Signature Craft</span>
         </button>
         <button 
           data-category="espresso" 
-          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71]"
+          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71] flex items-center gap-1.5"
         >
-          ☕ Espresso Based
+          <svg class="w-3.5 h-3.5 text-[#829C71]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path></svg>
+          <span>Espresso Based</span>
         </button>
         <button 
           data-category="non-coffee" 
-          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71]"
+          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71] flex items-center gap-1.5"
         >
-          🍵 Non-Coffee & Tea
+          <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <span>Non-Coffee & Tea</span>
         </button>
         <button 
           data-category="pastry" 
-          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71]"
+          class="category-btn whitespace-nowrap bg-white text-stone-600 border border-stone-200 px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 hover:border-[#829C71] flex items-center gap-1.5"
         >
-          🥐 Pastry & Bakery
+          <svg class="w-3.5 h-3.5 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M10 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <span>Pastry & Bakery</span>
         </button>
       </div>
 
@@ -432,8 +451,10 @@
 
       <!-- Empty State Illustration (if search not found) -->
       <div id="catalogEmpty" class="hidden text-center py-16 bg-white rounded-3xl border border-stone-200">
-        <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto text-2xl mb-4">
-          🍃
+        <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto text-stone-400 mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
         </div>
         <h3 class="text-base font-bold text-[#1A1A1A]">Menu Tidak Ditemukan</h3>
         <p class="text-xs text-stone-500 mt-1">Coba cari kata kunci lain seperti "matcha", "aren", atau "croissant".</p>
@@ -442,8 +463,10 @@
       <!-- Bottom Helper Banner -->
       <div class="mt-14 p-6 bg-white rounded-3xl border border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm reveal-item">
         <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-2xl bg-[#829C71]/15 text-[#829C71] flex items-center justify-center font-bold text-xl">
-            💬
+          <div class="w-12 h-12 rounded-2xl bg-[#829C71]/15 text-[#829C71] flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
           </div>
           <div>
             <h4 class="font-bold text-sm text-[#1A1A1A]">Ingin Pesan Kustom atau Catering Acara?</h4>
@@ -543,7 +566,13 @@
         <!-- Review 1 -->
         <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between reveal-item delay-100">
           <div>
-            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex text-amber-500 gap-1 mb-3">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <p class="text-xs text-stone-600 leading-relaxed italic">
               "Matcha Espresso Fusion-nya beneran juara! Rasa matcha Uji-nya legit, espressonya gak asam menusuk. Tempatnya tenang banget buat ngerjain tugas kantor seharian."
             </p>
@@ -562,7 +591,13 @@
         <!-- Review 2 -->
         <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between reveal-item delay-200">
           <div>
-            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex text-amber-500 gap-1 mb-3">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <p class="text-xs text-stone-600 leading-relaxed italic">
               "Tempat favorit buat menyendiri atau ngobrol santai sore hari. Suasananya tenang, aroma kopinya wangi begitu masuk pintu, dan pencahayaan hangatnya bikin betah berjam-jam."
             </p>
@@ -581,7 +616,13 @@
         <!-- Review 3 -->
         <div class="bg-white p-6 rounded-3xl border border-stone-200 shadow-sm flex flex-col justify-between reveal-item delay-300">
           <div>
-            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <div class="flex text-amber-500 gap-1 mb-3">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <p class="text-xs text-stone-600 leading-relaxed italic">
               "Croissant-nya buttery banget dan Shokupan Toast-nya lembut parah. Harganya sangat bersahabat untuk kualitas artisan selevel ini. Pelayanan baristanya ramah pol!"
             </p>
@@ -704,8 +745,9 @@
                 <p class="text-xs font-bold text-[#1A1A1A]">ÖKIRO CAFÉ • Kedai Pusat</p>
                 <p class="text-[11px] text-stone-500">Buka Setiap Hari Mulai 08:00 WIB</p>
               </div>
-              <span class="text-xs font-bold text-[#829C71] flex items-center gap-1">
-                📍 2.5 km dari Stasiun
+              <span class="text-xs font-bold text-[#829C71] flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <span>2.5 km dari Stasiun</span>
               </span>
             </div>
           </div>

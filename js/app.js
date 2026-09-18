@@ -239,14 +239,14 @@ function orderProductViaWhatsApp(productId) {
   if (!item) return;
 
   // Build direct WhatsApp message
-  let text = `*☕ PESANAN MENU - ${CONFIG.cafeName}*\n`;
+  let text = `*PESANAN MENU - ${CONFIG.cafeName}*\n`;
   text += `═══════════════════════\n`;
   text += `Halo Admin Ökiro Café, saya ingin memesan menu ini:\n\n`;
   text += `• *${item.name}*\n`;
   text += `  Kategori: ${item.category.toUpperCase()}\n`;
   text += `  Harga: ${formatRupiah(item.price)}\n\n`;
   text += `═══════════════════════\n`;
-  text += `Apakah menu ini saat ini tersedia? Terima kasih! 🙏🍃`;
+  text += `Apakah menu ini saat ini tersedia? Terima kasih!`;
 
   const encodedText = encodeURIComponent(text);
   const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodedText}`;
