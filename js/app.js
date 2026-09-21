@@ -8,7 +8,7 @@
 // ==========================================
 const CONFIG = {
   cafeName: "ÖKIRO CAFÉ",
-  whatsappNumber: "6281234567890", // Ganti dengan nomor WhatsApp admin kafe
+  whatsappNumber: "6283846480183", // Ganti dengan nomor WhatsApp admin kafe
   currency: "Rp",
   openHour: 8,
   closeHour: 22
