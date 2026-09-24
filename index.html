@@ -89,50 +89,68 @@
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-700">
         <a href="#home" class="hover:text-[#829C71] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#829C71] hover:after:w-full after:transition-all after:duration-300">Beranda</a>
         <a href="#about" class="hover:text-[#829C71] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#829C71] hover:after:w-full after:transition-all after:duration-300">Tentang Kami</a>
         <a href="#menu" class="hover:text-[#829C71] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#829C71] hover:after:w-full after:transition-all after:duration-300">Menu & Pesan</a>
         <a href="#fasilitas" class="hover:text-[#829C71] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#829C71] hover:after:w-full after:transition-all after:duration-300">Suasana</a>
-        <a href="#lokasi" class="hover:text-[#829C71] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#829C71] hover:after:w-full after:transition-all after:duration-300">Lokasi</a>
+        <a href="#lokasi" class="hover:text-[#829C71] transition-colors relative py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#829C71] hover:after:w-full after:transition-all after:duration-300 flex items-center gap-1">
+          <span>Cabang Kami</span>
+          <span class="bg-[#829C71]/20 text-[#2C4027] text-[10px] font-bold px-1.5 py-0.5 rounded-full">3 Kota</span>
+        </a>
       </nav>
 
       <!-- Desktop Action & Cart Button -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-3">
         <!-- Store Status Pill -->
         <div id="storeStatusBadge" class="flex items-center gap-2 bg-stone-200/60 px-3 py-1.5 rounded-full text-xs font-semibold text-stone-700">
           <div class="relative flex items-center justify-center w-2.5 h-2.5">
             <span id="storeStatusDot" class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
           </div>
-          <span id="storeStatusText">Buka Hari Ini • 08:00 - 22:00</span>
+          <span id="storeStatusText">3 Cabang Buka</span>
         </div>
 
+        <!-- Interactive Shopping Cart Button -->
+        <button 
+          id="cartBtnDesktop" 
+          onclick="openCart()"
+          class="relative flex items-center gap-2 bg-white hover:bg-[#829C71]/10 text-[#2C4027] border border-[#829C71]/40 px-3.5 py-2 rounded-full transition-all duration-300 shadow-sm hover:shadow active:scale-95 text-xs font-bold"
+          aria-label="Buka Keranjang Pesanan"
+        >
+          <svg class="w-4 h-4 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span>Keranjang</span>
+          <span id="cartCountBadgeNavbar" class="bg-[#2C4027] text-white text-[11px] font-bold px-1.5 py-0.2 rounded-full min-w-[20px] text-center">0</span>
+        </button>
+
         <!-- Direct WhatsApp Order CTA Button -->
-        <a 
-          href="https://wa.me/6283846480183?text=Halo%20Ökiro%20Café,%20saya%20ingin%20memesan%20kopi/menu.%20Bisa%20dibantu?"
-          target="_blank"
-          class="relative flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-5 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 text-xs font-bold tracking-wide group"
-          aria-label="Pesan via WhatsApp"
+        <button 
+          onclick="openCart()"
+          class="relative flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-4 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 text-xs font-bold tracking-wide group"
+          aria-label="Pesan via WhatsApp Multi-Cabang"
         >
           <svg class="w-4 h-4 fill-current transition-transform group-hover:rotate-12 duration-300" viewBox="0 0 24 24">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
           </svg>
           <span>Pesan via WA</span>
-        </a>
+        </button>
       </div>
 
       <!-- Mobile Right Controls -->
       <div class="flex md:hidden items-center gap-2">
-        <a 
-          href="https://wa.me/6283846480183?text=Halo%20Ökiro%20Café,%20saya%20ingin%20memesan%20kopi/menu." 
-          target="_blank"
-          class="p-2 text-[#25D366] hover:opacity-80 transition"
-          aria-label="Pesan via WhatsApp"
+        <!-- Mobile Cart Button -->
+        <button 
+          id="cartBtnMobile" 
+          onclick="openCart()"
+          class="relative p-2.5 rounded-full bg-white text-[#2C4027] border border-[#829C71]/30 hover:bg-[#829C71]/10 transition shadow-sm"
+          aria-label="Lihat Keranjang Belanja"
         >
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          <svg class="w-5 h-5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
           </svg>
-        </a>
+          <span id="cartCountBadgeMobile" class="absolute -top-1 -right-1 bg-[#2C4027] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+        </button>
 
         <button 
           id="mobileMenuBtn"
@@ -152,7 +170,19 @@
       <a href="#about" class="block text-sm font-bold text-stone-800 hover:text-[#829C71] py-2 border-b border-stone-100">Tentang Kami</a>
       <a href="#menu" class="block text-sm font-bold text-stone-800 hover:text-[#829C71] py-2 border-b border-stone-100">Menu & Katalog</a>
       <a href="#fasilitas" class="block text-sm font-bold text-stone-800 hover:text-[#829C71] py-2 border-b border-stone-100">Suasana & WFC</a>
-      <a href="#lokasi" class="block text-sm font-bold text-stone-800 hover:text-[#829C71] py-2">Lokasi & Jam Buka</a>
+      <a href="#lokasi" class="block text-sm font-bold text-stone-800 hover:text-[#829C71] py-2 border-b border-stone-100 flex items-center justify-between">
+        <span>3 Cabang Kami</span>
+        <span class="text-[10px] bg-[#829C71]/20 text-[#2C4027] px-2 py-0.5 rounded-full font-bold">Jakarta • Bandung • Bali</span>
+      </a>
+      <button 
+        onclick="openCart(); document.getElementById('mobileMenu').classList.add('hidden');" 
+        class="w-full mt-2 py-2.5 bg-[#829C71] hover:bg-[#2C4027] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        <span>Buka Keranjang Pesanan</span>
+      </button>
     </div>
   </header>
 
@@ -644,26 +674,79 @@
   </section>
 
   <!-- =====================================================================
-       8. LOCATION & OPERATIONAL HOURS SECTION
+       8. MULTI-BRANCH LOCATION & OPERATIONAL HOURS SECTION
        ===================================================================== -->
-  <section id="lokasi" class="py-20 md:py-28 bg-white border-t border-stone-200">
+  <section id="lokasi" class="py-20 md:py-28 bg-white border-t border-stone-200 relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal-item">
+        <span class="text-xs font-bold tracking-widest text-[#829C71] uppercase font-jp">MULTI-CABANG ÖKIRO • 支店のご案内</span>
+        <h2 class="text-2xl sm:text-4xl font-bold text-[#1A1A1A] mt-2">
+          3 Cabang Ökiro di 3 Kota Pilihan
+        </h2>
+        <div class="w-16 h-1 bg-[#829C71] mx-auto mt-3 rounded-full"></div>
+        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-medium mt-3">
+          Temukan ketenangan khas Ökiro di Jakarta, Bandung, dan Bali. Setiap cabang memiliki nomor WhatsApp khusus untuk kemudahan pemesanan Anda.
+        </p>
+      </div>
+
+      <!-- Branch Selection Tabs -->
+      <div class="flex items-center justify-center gap-3 mb-10 overflow-x-auto pb-2 reveal-item">
+        <button 
+          onclick="selectBranchTab('senopati')"
+          id="branchTabBtn-senopati"
+          class="branch-tab-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-[#829C71] text-white shadow-md"
+        >
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span>1. Jakarta (Senopati)</span>
+        </button>
+        <button 
+          onclick="selectBranchTab('dago')"
+          id="branchTabBtn-dago"
+          class="branch-tab-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-stone-100 text-stone-600 hover:bg-stone-200"
+        >
+          <span class="w-2 h-2 rounded-full bg-stone-400"></span>
+          <span>2. Bandung (Dago)</span>
+        </button>
+        <button 
+          onclick="selectBranchTab('canggu')"
+          id="branchTabBtn-canggu"
+          class="branch-tab-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 bg-stone-100 text-stone-600 hover:bg-stone-200"
+        >
+          <span class="w-2 h-2 rounded-full bg-stone-400"></span>
+          <span>3. Bali (Canggu)</span>
+        </button>
+      </div>
+
+      <!-- Branch Showcase Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Left Details -->
+        <!-- Left Details (Dynamic via JS) -->
         <div class="lg:col-span-6 space-y-6 reveal-left">
-          <span class="text-xs font-bold tracking-widest text-[#829C71] uppercase font-jp">LOKASI & JAM OPERASIONAL • 営業時間</span>
-          <h2 class="text-2xl sm:text-4xl font-bold text-[#1A1A1A]">
-            Singgahi Kedai Kami Hari Ini
-          </h2>
-          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-medium">
-            Temukan kenyamanan secangkir kopi hangat di sudut kota yang tenang. Tersedia parkir mobil & motor yang aman serta beratap.
+          
+          <div class="flex items-center gap-3">
+            <span id="showcaseBranchBadge" class="text-xs font-bold bg-[#829C71]/15 text-[#2C4027] px-3 py-1 rounded-full border border-[#829C71]/30">
+              Flagship Store
+            </span>
+            <span class="text-xs text-stone-400">•</span>
+            <span id="showcaseBranchCity" class="text-xs font-bold text-stone-500 uppercase tracking-wider">
+              Jakarta Selatan
+            </span>
+          </div>
+
+          <h3 id="showcaseBranchName" class="text-2xl sm:text-3xl font-bold text-[#1A1A1A]">
+            Ökiro Senopati (Pusat)
+          </h3>
+
+          <p id="showcaseBranchDesc" class="text-xs sm:text-sm text-stone-600 leading-relaxed font-medium">
+            Ruang tenang bergaya Wabi-Sabi di tengah Senopati yang dinamis. Menyediakan area indoor ber-AC hening khusus WFC dan outdoor beratap hijau.
           </p>
 
-          <div class="space-y-4 pt-2">
+          <div class="space-y-3.5 pt-2">
             
-            <div class="flex items-start gap-4 p-4 bg-[#F6F4EB] rounded-2xl border border-stone-200/80">
+            <!-- Address Card -->
+            <div class="flex items-start gap-3.5 p-4 bg-[#F6F4EB] rounded-2xl border border-stone-200/80">
               <div class="w-10 h-10 rounded-xl bg-[#829C71] text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -671,14 +754,15 @@
                 </svg>
               </div>
               <div>
-                <h4 class="font-bold text-xs text-[#1A1A1A]">Alamat Kedai</h4>
-                <p class="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                  Jl. Senopati Asri No. 42, Kelurahan Melati, Kota Kopi, Indonesia 12340
+                <h4 class="font-bold text-xs text-[#1A1A1A]">Alamat Cabang</h4>
+                <p id="showcaseBranchAddress" class="text-xs text-stone-600 mt-0.5 leading-relaxed">
+                  Jl. Senopati Asri No. 42, Kebayoran Baru, Jakarta Selatan 12190
                 </p>
               </div>
             </div>
 
-            <div class="flex items-start gap-4 p-4 bg-[#F6F4EB] rounded-2xl border border-stone-200/80">
+            <!-- Hours Card -->
+            <div class="flex items-start gap-3.5 p-4 bg-[#F6F4EB] rounded-2xl border border-stone-200/80">
               <div class="w-10 h-10 rounded-xl bg-[#829C71] text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -686,40 +770,52 @@
               </div>
               <div class="flex-1">
                 <h4 class="font-bold text-xs text-[#1A1A1A]">Jam Operasional</h4>
-                <div class="grid grid-cols-2 gap-2 mt-1 text-xs text-stone-600">
+                <div class="grid grid-cols-2 gap-1.5 mt-1 text-xs text-stone-600">
                   <p>Senin - Jumat:</p>
-                  <p class="font-bold text-[#1A1A1A]">08:00 - 22:00 WIB</p>
+                  <p id="showcaseBranchWeekday" class="font-bold text-[#1A1A1A]">08:00 - 22:00 WIB</p>
                   <p>Sabtu - Minggu:</p>
-                  <p class="font-bold text-[#1A1A1A]">07:30 - 23:00 WIB</p>
+                  <p id="showcaseBranchWeekend" class="font-bold text-[#1A1A1A]">07:30 - 23:00 WIB</p>
                 </div>
               </div>
             </div>
 
-            <div class="flex items-start gap-4 p-4 bg-[#F6F4EB] rounded-2xl border border-stone-200/80">
-              <div class="w-10 h-10 rounded-xl bg-[#829C71] text-white flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            <!-- WhatsApp & Contact Card -->
+            <div class="flex items-start gap-3.5 p-4 bg-[#F6F4EB] rounded-2xl border border-stone-200/80">
+              <div class="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                 </svg>
               </div>
               <div>
-                <h4 class="font-bold text-xs text-[#1A1A1A]">Kontak & Reservasi</h4>
-                <p class="text-xs text-stone-600 mt-0.5">
-                  WhatsApp: +62 838-4648-0183 • Instagram: @okirocafe
+                <h4 class="font-bold text-xs text-[#1A1A1A]">WhatsApp Khusus Cabang Ini</h4>
+                <p id="showcaseBranchPhone" class="text-xs text-stone-600 mt-0.5 font-semibold">
+                  +62 838-4648-0183
                 </p>
               </div>
             </div>
 
           </div>
 
-          <!-- Direction CTA -->
-          <div class="pt-2">
+          <!-- Action Buttons for this Branch -->
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <button 
+              onclick="orderToCurrentShowcaseBranch()"
+              class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs px-6 py-3 rounded-full transition shadow hover:shadow-md active:scale-95"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span>Pesan di Cabang Ini</span>
+            </button>
+
             <a 
+              id="showcaseBranchMapsLink"
               href="https://maps.google.com" 
               target="_blank" 
-              class="inline-flex items-center gap-2 bg-[#829C71] hover:bg-[#2C4027] text-white font-bold text-xs px-6 py-3 rounded-full transition shadow hover:shadow-md"
+              class="inline-flex items-center gap-2 bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs px-5 py-3 rounded-full transition shadow-sm"
             >
-              <span>Buka di Google Maps</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>Buka Google Maps</span>
+              <svg class="w-4 h-4 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
               </svg>
             </a>
@@ -728,26 +824,27 @@
 
         <!-- Right Interactive Map Showcase -->
         <div class="lg:col-span-6 reveal-right">
-          <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-stone-100 h-[380px]">
-            <!-- Stylized Map Placeholder with Location Pin -->
+          <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-stone-100 h-[400px]">
+            <!-- Dynamic Iframe for Selected Branch -->
             <iframe 
+              id="showcaseBranchIframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2736199859546!2d106.80918737499047!3d-6.227608993760548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14d30079f01%3A0x2e74f4f39b6b7a5a!2sSenopati%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-              class="w-full h-full border-0 grayscale-[40%] contrast-105" 
+              class="w-full h-full border-0 grayscale-[30%] contrast-105" 
               allowfullscreen="" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
-              title="Peta Lokasi Okiro Cafe"
+              title="Peta Lokasi Cabang Ökiro"
             ></iframe>
 
             <!-- Location Overlay Card -->
             <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-stone-200 flex items-center justify-between">
               <div>
-                <p class="text-xs font-bold text-[#1A1A1A]">ÖKIRO CAFÉ • Kedai Pusat</p>
-                <p class="text-[11px] text-stone-500">Buka Setiap Hari Mulai 08:00 WIB</p>
+                <p id="showcaseOverlayName" class="text-xs font-bold text-[#1A1A1A]">ÖKIRO CAFÉ • Kedai Pusat Senopati</p>
+                <p id="showcaseOverlayCity" class="text-[11px] text-stone-500">Jakarta Selatan • Buka Setiap Hari</p>
               </div>
               <span class="text-xs font-bold text-[#829C71] flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span>2.5 km dari Stasiun</span>
+                <span id="showcaseOverlayDistance">Strategis & Akses Mudah</span>
               </span>
             </div>
           </div>
@@ -831,9 +928,34 @@
 
 
   <!-- =====================================================================
+       10. FLOATING CART SUMMARY BAR
+       ===================================================================== -->
+  <div 
+    id="floatingCartBar" 
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 hidden transition-all duration-300 transform"
+  >
+    <button 
+      onclick="openCart()"
+      class="flex items-center gap-3 bg-[#2C4027] hover:bg-[#1A1A1A] text-white px-5 py-3 rounded-full shadow-2xl border border-[#829C71]/40 hover:scale-105 active:scale-95 transition-all text-xs font-bold"
+    >
+      <div class="relative flex items-center justify-center">
+        <svg class="w-4 h-4 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        <span id="floatingCartBadge" class="absolute -top-2 -right-2 bg-emerald-500 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+      </div>
+      <span id="floatingCartText">0 Item Terpilih</span>
+      <span class="w-1 h-1 rounded-full bg-stone-500"></span>
+      <span id="floatingCartTotal" class="text-amber-300">Rp 0</span>
+      <span class="ml-1 bg-white/10 px-2 py-0.5 rounded-full text-[10px]">Lihat Pesanan &rarr;</span>
+    </button>
+  </div>
+
+  <!-- =====================================================================
        11. FLOATING WHATSAPP PULSE BUTTON (Quick Contact)
        ===================================================================== -->
   <a 
+    id="floatingWaButton"
     href="https://wa.me/6283846480183?text=Halo%20Ökiro%20Café,%20saya%20ingin%20tanya%20info%20menu%20dan%20reservasi." 
     target="_blank"
     class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 pulse-ring group"
@@ -846,7 +968,256 @@
   </a>
 
   <!-- =====================================================================
-       12. TOAST NOTIFICATION CONTAINER
+       12. CART DRAWER (SLIDE-OVER PANEL)
+       ===================================================================== -->
+  <div id="cartDrawerBackdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeCart()"></div>
+  
+  <div 
+    id="cartDrawer" 
+    class="fixed top-0 right-0 bottom-0 w-full sm:w-[460px] bg-[#F6F4EB] z-50 shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Keranjang Pesanan Ökiro"
+  >
+    <!-- Drawer Header -->
+    <div class="px-6 py-5 bg-white border-b border-stone-200 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-[#829C71]/15 text-[#2C4027] flex items-center justify-center font-bold">
+          <svg class="w-4 h-4 text-[#829C71]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-base text-[#1A1A1A]">Keranjang Pesanan</h3>
+            <span id="cartDrawerItemCountBadge" class="bg-[#829C71] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">0 Item</span>
+          </div>
+          <p class="text-[10px] text-stone-500 font-jp">ご注文リスト • ÖKIRO CAFÉ</p>
+        </div>
+      </div>
+
+      <button 
+        onclick="closeCart()"
+        class="w-8 h-8 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-600 flex items-center justify-center transition focus:outline-none"
+        aria-label="Tutup Keranjang"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Body (Scrollable) -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-6">
+      
+      <!-- Empty Cart State -->
+      <div id="cartEmptyState" class="text-center py-16 space-y-4">
+        <div class="w-20 h-20 mx-auto rounded-full bg-stone-200/60 flex items-center justify-center text-stone-400">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm text-[#1A1A1A]">Keranjang Anda Masih Kosong</h4>
+          <p class="text-xs text-stone-500 mt-1 max-w-xs mx-auto">
+            Pilih menu kopi spesial atau pastry hangat dari katalog kami dan tambahkan ke keranjang.
+          </p>
+        </div>
+        <button 
+          onclick="closeCart(); location.href='#menu';" 
+          class="bg-[#829C71] hover:bg-[#2C4027] text-white text-xs font-bold px-6 py-2.5 rounded-full transition shadow-sm"
+        >
+          Lihat Menu Sekarang
+        </button>
+      </div>
+
+      <!-- Cart Content (Hidden if empty) -->
+      <div id="cartContentWrapper" class="space-y-6 hidden">
+        
+        <!-- Cart Items List -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-stone-600">Daftar Item</span>
+            <button onclick="clearCart()" class="text-[11px] text-red-600 hover:text-red-700 font-semibold underline">
+              Kosongkan
+            </button>
+          </div>
+          <div id="cartItemsList" class="space-y-3">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- Customer & Order Details Form -->
+        <div class="bg-white p-4 rounded-2xl border border-stone-200/80 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-stone-600 block">Detail Pemesan</span>
+          
+          <!-- Name Input -->
+          <div>
+            <label for="cartCustomerName" class="block text-[11px] font-bold text-stone-700 mb-1">Nama Pemesan (Opsional)</label>
+            <input 
+              type="text" 
+              id="cartCustomerName" 
+              placeholder="Contoh: Budi Santoso"
+              class="w-full bg-[#F6F4EB] border border-stone-200 rounded-xl px-3 py-2 text-xs font-semibold focus:outline-none focus:border-[#829C71] transition"
+            />
+          </div>
+
+          <!-- Order Type Segment -->
+          <div>
+            <label class="block text-[11px] font-bold text-stone-700 mb-1.5">Tipe Pemesanan</label>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="relative flex items-center justify-center p-2 rounded-xl border border-stone-200 bg-[#F6F4EB] cursor-pointer hover:border-[#829C71] transition has-[:checked]:border-[#829C71] has-[:checked]:bg-[#829C71]/10 has-[:checked]:text-[#2C4027]">
+                <input type="radio" name="orderType" value="Dine-In" checked class="hidden" onchange="updateOrderType(this.value)" />
+                <span class="text-xs font-bold flex items-center gap-1.5">
+                  <span>🍽️</span>
+                  <span>Dine-In</span>
+                </span>
+              </label>
+              <label class="relative flex items-center justify-center p-2 rounded-xl border border-stone-200 bg-[#F6F4EB] cursor-pointer hover:border-[#829C71] transition has-[:checked]:border-[#829C71] has-[:checked]:bg-[#829C71]/10 has-[:checked]:text-[#2C4027]">
+                <input type="radio" name="orderType" value="Takeaway" class="hidden" onchange="updateOrderType(this.value)" />
+                <span class="text-xs font-bold flex items-center gap-1.5">
+                  <span>🛍️</span>
+                  <span>Takeaway</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Special Notes -->
+          <div>
+            <label for="cartOrderNotes" class="block text-[11px] font-bold text-stone-700 mb-1">Catatan Tambahan (Opsional)</label>
+            <textarea 
+              id="cartOrderNotes" 
+              rows="2" 
+              placeholder="Contoh: Less sugar, oat milk, es batu dipisah..."
+              class="w-full bg-[#F6F4EB] border border-stone-200 rounded-xl px-3 py-2 text-xs font-medium focus:outline-none focus:border-[#829C71] transition resize-none"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Multi-Branch Destination Selector (CRITICAL FEATURE) -->
+        <div class="bg-white p-4 rounded-2xl border border-stone-200/80 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-stone-600 flex items-center gap-1.5">
+              <span>📍</span>
+              <span>Pilih Cabang Pemesanan</span>
+            </span>
+            <span class="text-[10px] bg-[#829C71]/15 text-[#2C4027] font-bold px-2 py-0.5 rounded-full">
+              3 Cabang
+            </span>
+          </div>
+          <p class="text-[11px] text-stone-500">
+            Pesanan Anda akan langsung dikirim ke WhatsApp admin cabang yang Anda pilih di bawah ini:
+          </p>
+
+          <!-- Branch Radio Cards -->
+          <div class="space-y-2.5">
+            
+            <!-- Branch 1: Senopati -->
+            <label class="branch-card-option block cursor-pointer">
+              <input type="radio" name="cartBranchSelect" value="senopati" checked class="hidden" onchange="selectCartBranch('senopati')" />
+              <div class="branch-card-content p-3 rounded-xl border border-stone-200 transition-all flex items-center justify-between">
+                <div class="flex items-start gap-3">
+                  <div class="w-4 h-4 rounded-full border border-stone-400 mt-0.5 flex items-center justify-center branch-check-indicator">
+                    <span class="w-2 h-2 rounded-full bg-current"></span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h5 class="text-xs font-bold text-[#1A1A1A]">Ökiro Senopati (Pusat)</h5>
+                      <span class="text-[9px] bg-[#2C4027] text-white px-1.5 py-0.2 rounded font-semibold">Jakarta</span>
+                    </div>
+                    <p class="text-[10px] text-stone-500 mt-0.5">Jl. Senopati Asri No. 42, Jaksel</p>
+                    <p class="text-[10px] text-[#25D366] font-bold mt-0.5">WA: +62 838-4648-0183</p>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+            <!-- Branch 2: Dago -->
+            <label class="branch-card-option block cursor-pointer">
+              <input type="radio" name="cartBranchSelect" value="dago" class="hidden" onchange="selectCartBranch('dago')" />
+              <div class="branch-card-content p-3 rounded-xl border border-stone-200 transition-all flex items-center justify-between">
+                <div class="flex items-start gap-3">
+                  <div class="w-4 h-4 rounded-full border border-stone-400 mt-0.5 flex items-center justify-center branch-check-indicator">
+                    <span class="w-2 h-2 rounded-full bg-current"></span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h5 class="text-xs font-bold text-[#1A1A1A]">Ökiro Dago Heritage</h5>
+                      <span class="text-[9px] bg-[#829C71] text-white px-1.5 py-0.2 rounded font-semibold">Bandung</span>
+                    </div>
+                    <p class="text-[10px] text-stone-500 mt-0.5">Jl. Ir. H. Juanda No. 128, Dago</p>
+                    <p class="text-[10px] text-[#25D366] font-bold mt-0.5">WA: +62 812-3456-7801</p>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+            <!-- Branch 3: Canggu -->
+            <label class="branch-card-option block cursor-pointer">
+              <input type="radio" name="cartBranchSelect" value="canggu" class="hidden" onchange="selectCartBranch('canggu')" />
+              <div class="branch-card-content p-3 rounded-xl border border-stone-200 transition-all flex items-center justify-between">
+                <div class="flex items-start gap-3">
+                  <div class="w-4 h-4 rounded-full border border-stone-400 mt-0.5 flex items-center justify-center branch-check-indicator">
+                    <span class="w-2 h-2 rounded-full bg-current"></span>
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <h5 class="text-xs font-bold text-[#1A1A1A]">Ökiro Canggu Sanctuary</h5>
+                      <span class="text-[9px] bg-amber-700 text-white px-1.5 py-0.2 rounded font-semibold">Bali</span>
+                    </div>
+                    <p class="text-[10px] text-stone-500 mt-0.5">Jl. Pantai Batu Bolong No. 88, Canggu</p>
+                    <p class="text-[10px] text-[#25D366] font-bold mt-0.5">WA: +62 819-8765-4321</p>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Drawer Footer (Checkout Actions) -->
+    <div id="cartDrawerFooter" class="p-6 bg-white border-t border-stone-200 space-y-4 hidden">
+      <!-- Price Breakdown -->
+      <div class="space-y-1.5 text-xs text-stone-600">
+        <div class="flex items-center justify-between">
+          <span>Subtotal Pesanan:</span>
+          <span id="cartDrawerSubtotal" class="font-semibold text-stone-800">Rp 0</span>
+        </div>
+        <div class="flex items-center justify-between text-[#829C71]">
+          <span>Biaya Layanan Kafe:</span>
+          <span class="font-bold">Gratis (Rp 0)</span>
+        </div>
+        <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-base font-extrabold text-[#1A1A1A]">
+          <span>Total Pembayaran:</span>
+          <span id="cartDrawerTotal" class="text-[#2C4027]">Rp 0</span>
+        </div>
+      </div>
+
+      <!-- Main WhatsApp Checkout CTA Button -->
+      <button 
+        onclick="checkoutViaWhatsApp()"
+        id="btnCheckoutWhatsApp"
+        class="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white py-3.5 px-4 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl active:scale-95 group"
+      >
+        <svg class="w-5 h-5 fill-current transition-transform group-hover:rotate-12 duration-300" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span id="btnCheckoutText">Kirim Pesanan ke WA Cabang Senopati</span>
+      </button>
+
+      <p class="text-[10px] text-stone-400 text-center">
+        Otomatis membuka WhatsApp dengan rincian lengkap pesanan Anda.
+      </p>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       13. TOAST NOTIFICATION CONTAINER
        ===================================================================== -->
   <div id="toastContainer" class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 pointer-events-none">
     <!-- Toasts injected here -->

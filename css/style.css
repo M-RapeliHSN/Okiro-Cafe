@@ -277,3 +277,49 @@ html {
 .toast-enter {
   animation: toast-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ==========================================================================
+   CART DRAWER & BRANCH SELECTOR SYSTEM
+   ========================================================================== */
+
+/* Drawer Slide-Over Transition */
+#cartDrawer {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#cartDrawer.translate-x-full {
+  transform: translateX(100%);
+}
+#cartDrawer.translate-x-0 {
+  transform: translateX(0);
+}
+
+#cartDrawerBackdrop {
+  transition: opacity 0.3s ease-out;
+}
+
+/* Branch Radio Card Active Accent */
+.branch-card-option input[type="radio"]:checked + .branch-card-content {
+  border-color: #829C71;
+  background-color: #F6F4EB;
+  box-shadow: 0 4px 14px rgba(130, 156, 113, 0.18);
+}
+
+.branch-card-option input[type="radio"]:checked + .branch-card-content .branch-check-indicator {
+  background-color: #829C71;
+  border-color: #829C71;
+  color: white;
+}
+
+/* Floating Cart Button Pulse */
+@keyframes cart-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.cart-indicator-bounce {
+  animation: cart-bounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
